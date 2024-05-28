@@ -15,7 +15,7 @@ def main():
 
     # Step 2: Data Preprocessing
     X_train, X_test, y_train, y_test = preprocess_data(data)
-('''
+
     # Step 3: Exploratory Data Analysis (EDA)
     perform_eda(data)
 
@@ -35,7 +35,7 @@ def main():
     # Step 8: Hyperparameter Tuning
     best_rf, best_params, best_score = tune_hyperparameters(X_train, y_train)
     print("Best parameters:", best_params)
-    print("Best score:", best_score)''')
+    print("Best score:", best_score)
 
 if __name__ == "__main__":
     main()
