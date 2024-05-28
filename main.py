@@ -11,6 +11,8 @@ from hyperparameter_tuning import tune_hyperparameters
 def main():
     # Step 1: Data Collection
     data = load_data()
+    
+    # Display data: Print the first few rows to inspect the dataset.
     print(data.head())
 
     # Step 2: Data Preprocessing
@@ -21,6 +23,7 @@ def main():
 
     # Step 4: Feature Selection
     feature_importance_df = select_features(X_train, y_train, data.columns[:-1])
+    # Display feature importances: Print the sorted DataFrame.
     print(feature_importance_df)
 
     # Step 5: Model Selection
@@ -34,6 +37,8 @@ def main():
 
     # Step 8: Hyperparameter Tuning
     best_rf, best_params, best_score = tune_hyperparameters(X_train, y_train)
+    
+    # Print the best hyperparameters and the corresponding score.
     print("Best parameters:", best_params)
     print("Best score:", best_score)
 
