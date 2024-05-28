@@ -1,7 +1,7 @@
 # data_collection.py
 
 # Import necessary libraries: We import the load_iris function
-# from sklearn.datasets and pandas for data manipulation.
+# from sklearn. datasets and pandas for data manipulation.
 from sklearn.datasets import load_iris
 import pandas as pd
 
