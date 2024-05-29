@@ -41,6 +41,15 @@ def main():
     # Print the best hyperparameters and the corresponding score.
     print("Best parameters:", best_params)
     print("Best score:", best_score)
+   
+    # Evaluate the final model on the test set
+    y_pred_final = best_rf.predict(X_test)
+    print("Final Model Classification Report:")
+    
+    #Importing required libraries
+    from sklearn.metrics import classification_report, accuracy_score
+    print(classification_report(y_test, y_pred_final))
+    print("Final Model Accuracy Score:", accuracy_score(y_test, y_pred_final))
 
 if __name__ == "__main__":
     main()

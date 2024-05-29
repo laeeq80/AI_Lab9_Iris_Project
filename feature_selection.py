@@ -8,7 +8,7 @@ import pandas as pd
 def select_features(X_train, y_train, feature_names):
     # Fit model: Instantiate and fit a Random Forest model to the training data.
     model = RandomForestClassifier()
-    model.fit(X_train, y_train)
+    model.fit(X_train, y_train) # We are training RF only for finding out important features
     
     # Feature importances: Retrieve the importance of each feature using model.feature_importances_.
     importances = model.feature_importances_

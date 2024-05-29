@@ -8,7 +8,9 @@ from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_sc
 # data, and compute evaluation metrics for each model.
 def evaluate_models(models, X_test, y_test):
     for name, model in models.items():
-        y_pred = model.predict(X_test)
+        y_pred = model.predict(X_test)	# Making predictions on the test data
+        
+        #Different types of evaluations
         accuracy = accuracy_score(y_test, y_pred)
         precision = precision_score(y_test, y_pred, average='macro')
         recall = recall_score(y_test, y_pred, average='macro')
